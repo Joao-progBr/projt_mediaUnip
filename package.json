@@ -1,0 +1,27 @@
+{
+  "name": "projeto-pessoal---media-unip",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "terser": "terser src/scripts/main.js -o dist/scripts/main.min.js -c -m",
+    "watch-js": "chokidar \"src/scripts/**/*.js\" -c \"npm run terser\"",
+
+    "minify-css": "cleancss -o dist/styles/main.min.css src/styles/main.css",
+    "watch-css": "onchange 'src/*.css' -- npm run minify-css",
+
+    "dev": "npm-run-all --parallel watch-js watch-css",
+
+    "build": "npm run terser && npm run minify-css",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "clean-css-cli": "^5.6.3",
+    "npm-run-all": "^4.1.5",
+    "terser": "^5.42.0"
+  }
+}
