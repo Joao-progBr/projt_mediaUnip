@@ -113,6 +113,14 @@ span{
     text-align: center;
 }
 
+.aprovado{
+  color: var(--button-calc);
+}
+
+.reprovado{
+  color: #ff0000;
+}
+
 .erro{
     /* width: 90%; */
     /* height: 100px; */
