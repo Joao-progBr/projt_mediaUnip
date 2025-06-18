@@ -38,10 +38,7 @@ function mostrarMedia(media){
     const status = media >= 6.75 ? "Aprovado" : "Reprovado";
     const classStatus = media >= 6.75 ? "aprovado" : "reprovado";
 
-    // Aplica apenas a classe base na <span>
     mediaF.className = 'media';
-
-    // Mostra a média e o status colorido separado
     mediaF.innerHTML = `Média Final: ${media.toFixed(2)} <span class="${classStatus}">${status}</span>`;
 
     // let mediaF = document.getElementById('mediaF')
@@ -59,8 +56,7 @@ function verificaInput(){
 
     if(!isNaN(np1) && !isNaN(np2) && !isNaN(pim)){
         btnCalcular.disabled = false
-        btnCalcular.classList.add('active');
-        // btnCalcular.classList.add('active:hover')
+        btnCalcular.classList.add('active')
     } else {
         btnCalcular.disabled = true;
         btnCalcular.classList.remove('active');
